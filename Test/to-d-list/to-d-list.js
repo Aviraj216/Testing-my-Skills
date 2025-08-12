@@ -40,7 +40,6 @@ document.getElementById("theme-toggle").addEventListener("click", () => {
 
 
 
-
 const taskform = document.getElementById("to-d-list-form");
 
 const taskoutput = document.querySelector(".task-output");
@@ -54,12 +53,27 @@ taskform.addEventListener("submit", function(event) {
     const taskdelete = document.getElementById("delete-task").value;
     const taskedit = document.getElementById("edit-task").value;
 
-    if (tasktitle && taskdiscription) {
+
+    function changeColor(element, priority) {
+    const p = priority.toLowerCase(); 
+    if (p === "high") {
+        element.style.backgroundColor = "red"; 
+    } else if (p === "medium") {
+        element.style.backgroundColor = "blue"; 
+    } else if (p === "low") {
+        element.style.backgroundColor = "green"; 
+    }
+}
+   
         const output = document.createElement("div");
-        output.innerHTML = `<strong>Task: </strong> ${tasktitle} <br> 
+        output.innerHTML = `
+                            <input  type="search" placeholder="Search Your Tasks"> <br>
+                            <strong>Task: </strong> ${tasktitle} <br> 
                             <strong>Discription:</strong> ${taskdiscription} <br> 
                             <strong>Priority:</strong> ${taskpriority} <br> 
                             <strong>Date: </strong> ${taskdate} <br>`;
+                            changeColor(output, taskpriority);
+
 
         const deletebtn = document.createElement("button");
         deletebtn.textContent = "🚮 Delete";
@@ -87,7 +101,7 @@ taskform.addEventListener("submit", function(event) {
                     <button type="submit">Save</button>
                 </form>
             `;
-
+            
             output.querySelector(".edit-form").addEventListener("submit", (e) => {
                 e.preventDefault();
                 const updatedTitle = output.querySelector("#edit-title").value.trim();
@@ -99,6 +113,8 @@ taskform.addEventListener("submit", function(event) {
                                      <strong>Discription: </strong> ${updatedDescription} <br> 
                                      <strong>Priority: </strong> ${updatedPriority} <br> 
                                      <strong>Date: </strong> ${updatedDate} <br>`;
+                                     changeColor(output, updatedPriority);
+
 
                 output.appendChild(editbtn);
                 output.appendChild(deletebtn);
@@ -109,5 +125,5 @@ taskform.addEventListener("submit", function(event) {
         output.appendChild(deletebtn);
         taskoutput.appendChild(output);
         taskform.reset();
-    }
+    
 });
