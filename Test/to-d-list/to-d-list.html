@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-d-list Application</title>
+    <link rel="stylesheet" href="to-d-list.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar">
+    <button id="theme-toggle">🌙</button>
+    </div>
+ 
+
+        <div class="text-list">
+        <span class="line-typing" id="typed-line"></span>
+        </div>
+
+        <div class="github-logo">
+        <a href="https://github.com/Aviraj216" target="_blank">
+            <img src="../images/github-logo.png" alt="GitHub Right" title="GitHub Logo" style="height: 100px; width: 100px; border-radius: 50%;"/>
+        </a>
+        </div>
+    </div>
+    <br>
+    <div class="text-list" style="font-size: 1.25rem; font-weight:800;">Simply add your tasks here</div>
+
+
+
+    <form action="" id="to-d-list-form"> 
+        <h1>Add your Data Here!</h1>
+        <input name="Task title" id="task-title" placeholder="Enter Task Title" required></input>
+        <textarea name="Task discription" id="task-discription" placeholder=" Enter Task Discription" required></textarea>
+        <select name="priority seceltion" id="priority-selection" required>
+            <option value="" disabled selected>Select Priority</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select> <br>
+        <button id="date-button">
+         Date <br>  <!-- <label for="date">Date:</label> -->
+            <input id="date" type="date" name="date" required >
+        </button> <br>
+            <button type="submit" id="add-task">Add Task</button>
+    </form>
+
+
+    <div class="task-output">
+        <button id="delete-task" hidden></button> 
+        <button id="edit-task" hidden></button>
+    </div>
+
+    <div class="footer">
+        <div id="footer-text">
+            <h2 style="font-size: 1.25rem; font-weight:800;">Why Simply Tasked?</h2>
+            <h3>Simply, because it is a SIMPLE To-Do List Tool to organize your tasks efficiently.</h3>
+            
+            <ol>
+                <h3> Intuitive task management</h3>
+                <h3>Seamless due date tracking</h3>
+                <h3>Beautiful and user-friendly design</h3>
+            </ol>
+        </div>
+    </div>
+    <footer>    
+        <h2>Developed and Designed By Aviraj Ashok Kumar | © All Rights Reserved</h2>
+    </footer>
+
+
+    <script src="to-d-list.js"></script>
+</body>
+</html>

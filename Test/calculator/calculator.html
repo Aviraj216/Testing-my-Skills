@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="headings" >
+    <h2 id="heading1" aria-required="true"> </h2>
+
+    <h1> Fully functional Calculator</h1>
+    </div>
+    <!-- <h2 id="heading2" style="padding-left: 545px;"> Hello</h2> -->
+
+    <div class="calculator">
+        <div class="screens">
+        <div id="first-num"></div>
+        <div id="operator"></div>
+
+        <div id="sec-num"></div>
+    </div>
+        <div id="screen"></div>
+
+        <div class="line1">
+            <button id="all-clear" class="action">C</button>
+            <button class="action">➗</button>
+            <button class="action">✖️</button>  
+            <button class="action">🔙</button>
+        </div>
+
+        <div class="line2">
+            <button class="value">9</button>
+            <button class="value">8</button>
+            <button class="value">7</button>  
+            <button class="action">➖</button>
+        </div>
+
+            <div class="line3">
+            <button class="value">6</button>
+            <button class="value">5</button>
+            <button class="value">4</button>  
+            <button class="action">➕</button>
+        </div>
+
+            <div class="line4" style="margin-top: 2px;">
+            <button class="value">3</button>
+            <button class="value">2</button>
+            <button class="value">1</button>  
+            <!-- <button class="action"></button> -->
+        </div>
+
+        <div class="line5" style="display: flex; margin-top: 5px;">
+            <button style="width: 200px;" class="value"> 0 </button>
+            <button class="value" style="margin-left: 5px;"> . </button>
+            <button id="equals-too" class="action" style="height: 200px; margin-top: -100px; margin-left: 9px;">🟰</button>
+        </div>
+    </div>
+ 
+
+    <script src="calculator.js"></script>
+</body>
+</html>
