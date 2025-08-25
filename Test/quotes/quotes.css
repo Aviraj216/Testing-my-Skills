@@ -1,0 +1,70 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6da2bb, #c974bd);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.completecode {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 350px;
+}
+
+/* Title */
+h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Quote Box */
+.quotendwriter {
+    margin-bottom: 20px;
+    background: #f9fafc;
+    padding: 15px;
+    border-left: 4px solid #4a90e2;
+    border-radius: 8px;
+}
+
+.quote {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.writer {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+
+/* Buttons */
+button {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #357ab8;
+}
+
+.clipboard, .generate, .download {
+    margin-top: 10px;
+}
